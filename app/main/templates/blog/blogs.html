@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}Blogs{% endblock %}
+
+{% block content %}
+    <div class="mw7 center ph3">
+        <h1>
+            Blogs
+        </h1>
+
+        <ul>
+            {% for blog in blogs %}
+                <li>
+                    <a href="blog/{{ blog.slug }}">
+                        {{ blog.title }} - {{ blog.published_at|prettydate }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

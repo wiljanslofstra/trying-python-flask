@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}Blog post{% endblock %}
+
+{% block content %}
+    <div class="mw7 center ph3">
+        <h1>
+            {{ blog.title }}
+        </h1>
+
+        <time datatime="{{ blog.published_at|datetime }}">
+            {{ blog.published_at|prettydate }}
+        </time>
+
+        <div>
+            {{ blog.content|safe }}
+        </div>
+    </div>
+{% endblock %}

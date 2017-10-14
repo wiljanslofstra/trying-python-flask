@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        {% block head %}
+        <title>{% block title %}{% endblock %} - TestApp</title>
+
+        <link rel="stylesheet" href="https://unpkg.com/tachyons@4.8.1/css/tachyons.min.css"/>
+        {% endblock %}
+    </head>
+    <body class="sans-serif">
+        <div id="content">
+            {% block content %}{% endblock %}
+        </div>
+    </body>
+</html>
