@@ -2,3 +2,4 @@ Flask==0.12.2
 Flask-SQLAlchemy==2.3.2
 PyMySQL==0.7.11
 Babel==2.5.1
+Flask-WTF==0.14.2
