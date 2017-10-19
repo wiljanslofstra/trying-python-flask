@@ -1,7 +1,7 @@
 from flask import render_template, redirect, request
 from datetime import datetime
 from ..main import app, db
-from .models import Form
+from ..models.Form import Form
 from .forms import ContactForm
 
 @app.route("/contact", methods=('GET', 'POST'))

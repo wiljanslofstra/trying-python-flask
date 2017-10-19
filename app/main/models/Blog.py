@@ -1,4 +1,5 @@
-from ..main import db
+from ..main import db, Base
+from .Author import Author
 
 class Blog(db.Model):
     __tablename__ = 'blogs'
@@ -10,7 +11,5 @@ class Blog(db.Model):
     author_id = db.Column(db.Integer, db.ForeignKey('authors.id'))
     author = db.relationship('Author')
 
-class Author(db.Model):
-    __tablename__ = 'authors'
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String)
+    def __repr__(self):
+        return self.title

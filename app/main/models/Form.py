@@ -7,3 +7,6 @@ class Form(db.Model):
     email = db.Column(db.String)
     message = db.Column(db.Text)
     created_at = db.Column(db.DateTime)
+
+    def __repr__(self):
+        return self.email

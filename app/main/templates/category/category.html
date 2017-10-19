@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}Category{% endblock %}
+
+{% block content %}
+    <div class="mw7 center ph3">
+        <h1>
+            {{ category.title }}
+        </h1>
+
+        <ul>
+            {% for blog in category.blogs %}
+                <li>
+                    <a href="/blog/{{ blog.slug }}">
+                        {{ blog.title }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

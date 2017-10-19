@@ -1,6 +1,6 @@
 from flask import render_template
 from ..main import app, db
-from .models import Blog
+from ..models.Blog import Blog
 
 @app.route("/blog")
 def blogs():
