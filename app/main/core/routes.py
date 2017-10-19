@@ -1,4 +1,5 @@
 from ..main import app, db
+from ..error import routes
 from ..blog import routes
 from ..contact import routes
 from ..category import routes
