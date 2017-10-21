@@ -18,4 +18,9 @@ localhost:5000
 
 # Database
 localhost:6603
+
+# Migrations
+docker exec -it <container_id>
+flask db migrate
+flask db upgrade
 ```

@@ -9,8 +9,8 @@ association_table = db.Table('categories_blogs_association', db.Model.metadata,
 class Category(db.Model):
     __tablename__ = 'categories'
     id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String)
-    slug = db.Column(db.String)
+    title = db.Column(db.String(255))
+    slug = db.Column(db.String(255))
     blogs = db.relationship("Blog", secondary=association_table, backref="categories")
 
     def __repr__(self):
